@@ -1,0 +1,882 @@
+@import './variables';
+
+// font mediaqueries
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .95rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .applinkbtn {
+
+        strong {
+            font-size: 1rem;
+        }
+
+
+
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .togglebtn {
+        width: 250px !important;
+    }
+
+    .pricingplan {
+        a {
+            font-size: 1rem !important;
+
+            span {
+                font-size: .8rem !important;
+                width: 70px !important;
+                padding: .5rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    // h2 {
+    //     font-size: 1rem;
+    // }
+}
+
+
+@media only screen and (max-width: 315px) {
+    .togglebtn {
+        width: 200px !important;
+    }
+
+    .pricingplan {
+        a {
+            padding: 5px 20px !important;
+
+            span {
+                font-size: .8rem !important;
+                width: 60px !important;
+                padding: 3px !important;
+                top: -12px !important;
+                right: -28px !important;
+            }
+        }
+    }
+}
+
+
+
+
+
+// style media queries
+@mixin navresponsive {
+    @media only screen and (max-width: 991px) {
+        flex-direction: column;
+        z-index: 100px;
+    }
+}
+
+@mixin menuresponsive {
+    @media only screen and (max-width: 991px) {
+        width: 100%;
+        justify-content: space-between;
+
+        .menu {
+            display: block;
+        }
+    }
+
+
+    @media only screen and (max-width: 575px) {
+        .menu {
+            width: 35px;
+            height: 25px;
+
+
+            span {
+                height: 5px;
+
+                &:nth-child(1) {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 11px;
+                }
+
+                &:nth-child(3) {
+                    top: 22px;
+                }
+
+                &.toggle:nth-child(1) {
+                    top: 11px;
+                    transform: rotate(135deg);
+                }
+
+                &.toggle:nth-child(2) {
+                    left: -35px;
+                    opacity: 0;
+                }
+
+                &.toggle:nth-child(3) {
+                    top: 11px;
+                    transform: rotate(-135deg)
+                }
+
+            }
+        }
+    }
+}
+
+@mixin logoresponsive {
+    @media only screen and (max-width: 1300px) {
+        height: 48px;
+
+        img {
+            width: 48px;
+            height: 48px;
+        }
+
+        h1 {
+            line-height: 48px;
+            height: 48px;
+            margin-left: .28rem;
+            color: $primary-color;
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
+
+    @media only screen and (max-width: 575px) {
+        height: 45px;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        h1 {
+            line-height: 45px;
+            height: 45px;
+            margin-left: .26rem;
+            font-size: 1.75rem;
+        }
+    }
+}
+
+
+@mixin navigationresponsive {
+    @media only screen and (max-width: 1300px) {
+        line-height: 48px;
+
+        li {
+            text-align: center;
+            width: 150px;
+        }
+
+        a {
+            font-size: 1.0625rem;
+        }
+    }
+
+
+    @media only screen and (max-width: 991px) {
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        top: 68px;
+        right: -280px;
+        height: calc(100vh - 68px);
+        width: 280px;
+        padding: 70px;
+        padding-right: 0;
+        padding-top: 40px;
+        border-radius: 50px 0 0 100%;
+        background: rgb(7, 103, 248);
+        background: linear-gradient(127deg, rgba(7, 103, 248, 1) 0%, rgba(75, 144, 249, 1) 100%);
+        color: #fff;
+        transition: all .25s ease-in-out;
+        overflow: hidden;
+
+
+
+
+        li {
+            text-align: start;
+            width: 100%;
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+            }
+
+            transform: translateX(300px);
+            opacity: 0;
+            transition: all .25s ease-in;
+            padding-left: 10px;
+
+            &:nth-child(2) {
+                transition: all .5s ease-in;
+                padding-left: 6px;
+            }
+
+            &:nth-child(3) {
+                transition: all .75s ease-in, color 0s ease-in;
+                padding-left: 12px;
+            }
+
+            &:nth-child(4) {
+                transition: all 1s ease-in;
+                padding-left: 20px;
+            }
+        }
+
+        a {
+            color: #fff;
+            background-color: transparent;
+
+            &:hover {
+                color: #fff;
+
+            }
+
+            &.active {
+                color: #fff;
+            }
+        }
+
+        &.show {
+            right: 0px;
+
+
+            li {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 280px) {
+        top: 65px;
+        height: calc(100vh - 65px);
+        width: 100vw;
+        border-radius: 0;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        li {
+            padding: 0 !important;
+        }
+    }
+}
+
+
+@mixin dropdownresponsive {
+    @media only screen and (max-width: 1300px) {
+        .dropdown-content {
+
+
+            li {
+                border: none;
+            }
+
+            a {
+
+                line-height: 35px;
+                font-size: .9rem;
+            }
+        }
+
+
+        &.hover:hover .dropdown-content,
+        .dropdown-content.active {
+            height: 143px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .dropdown-content {
+            margin-top: 0;
+            margin-left: 15px;
+            position: static;
+            border-left: #fff 1px solid;
+            width: 100%;
+
+
+
+            a {
+                text-align: start;
+                padding-left: 15px;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid transparent;
+                background-color: transparent;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+
+
+        }
+
+
+        &:hover .dropbtn {
+            color: #fff;
+        }
+    }
+}
+
+@mixin landingpageresponsive {
+    @media only screen and (max-width: 1600px) {
+        .image {
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+
+
+    @media only screen and (max-width: 1345px) {
+
+
+
+        .text {
+            width: 40%;
+
+            h1 {
+                font-size: 80px;
+                line-height: 1.1;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+
+
+
+
+            button {
+                width: 240px;
+            }
+        }
+
+        .image {
+
+            img {
+                width: 52%;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 1300px) {
+        height: calc(100vh - 70px);
+
+        .text {
+            margin-top: -34px;
+        }
+
+        .image {
+
+            img {
+                top: 68px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1250px) {
+        .text {
+            width: 47%;
+        }
+
+        .image {
+
+            img {
+                width: 54%;
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 1200px) {
+        .text {
+
+            h1 {
+                font-size: 70px;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+
+    }
+
+    @media only screen and (max-width: 1100px) {
+        .text {
+
+
+            h1 {
+                font-size: 65px;
+            }
+
+            p {
+                font-size: 1.05rem;
+            }
+        }
+
+        .image {
+
+            img {
+                width: 57%;
+            }
+        }
+
+    }
+
+
+    @media only screen and (max-width: 991px) {
+        .text {
+            width: 70%;
+        }
+
+        .image {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .text {
+            width: 90%;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .text {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        .text {
+            h1 {
+                font-size: 55px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .text {
+            h1 {
+                font-size: 45px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 300px) {
+        .text {
+            // h1 {
+            //     font-size: 42px;
+            // }
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 275px) {
+        height: auto;
+        margin-top: 40px;
+
+        .text {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@mixin whatwedoreponsive {
+    @media only screen and (max-width: 1200px) {
+
+
+        h1 {
+            max-width: 700px;
+        }
+
+
+        .services {
+            justify-content: center;
+        }
+
+        .box {
+            width: 270px;
+
+            img {
+                width: 90px;
+            }
+        }
+
+
+
+        .pattern {
+            width: 60%;
+        }
+
+        .introtext {
+            max-width: 450px;
+        }
+
+        .jointext {
+            max-width: 300px;
+        }
+    }
+
+
+
+    @media only screen and (max-width: 767px) {
+        .pattern {
+            display: none;
+        }
+
+        .introtext {
+            margin-top: 3rem;
+        }
+
+        .box {
+
+            img {
+                width: 80px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 420px) {
+        h1 {
+            width: 100%;
+        }
+    }
+}
+
+
+@mixin priceplanresponsive {
+    @media only screen and (max-width: 1199px) {
+        .pricing {
+            width: 100%;
+            height: 800px;
+            flex-direction: column;
+
+            .text {
+                width: 400px;
+                // margin-left: 2rem;
+            }
+
+            .priceboxes {
+                margin-top: 2rem;
+                margin-left: 0;
+                height: 516px;
+                width: 100%;
+                justify-content: space-evenly;
+
+                .monthlyp,
+                .yearlyp {
+                    justify-content: space-evenly;
+                }
+            }
+
+            .individual,
+            .enterprise {
+                width: 300px;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .pricing {
+            width: 100%;
+            height: 1320px;
+            flex-direction: column;
+
+            .priceboxes {
+                margin-top: 3rem;
+                height: 1032px;
+
+                .monthlyp,
+                .yearlyp {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .pricing {
+            height: 1170px;
+
+            .individual,
+            .enterprise {
+                height: 420px;
+
+
+                .wave_container {
+                    top: 185px;
+
+                    .wave {
+                        top: -$image-height + 5px;
+                    }
+
+                    .wave:nth-of-type(2) {
+                        top: -$image-height + ($swell-height - 2px) + 5px;
+                        left: -150px;
+                        animation: swell 5s ease -1.25s infinite;
+                        opacity: 1;
+                    }
+
+                    .wave:nth-of-type(3) {
+                        top: -$image-height + 5px;
+                        left: -120px;
+                        animation: wave 4s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+                        opacity: 1;
+                    }
+
+                }
+
+                .rupee {
+                    font-size: 1.4rem;
+                    vertical-align: top;
+                }
+
+                .amount {
+                    font-size: 2.4rem;
+                }
+
+                .period {
+                    font-size: 1rem;
+                }
+
+                .features {
+
+                    .tick {
+                        display: flex;
+                        margin-right: 15px;
+                        font-size: .7rem;
+                        color: $primary-color;
+                        width: 20px;
+                        height: 20px;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        background-color: $lighter-primary-color;
+                    }
+                }
+
+                .button {
+                    margin-top: 2.2rem;
+                }
+            }
+
+            .enterprise {
+                height: 445px;
+            }
+        }
+
+    }
+
+
+    @media only screen and (max-width: 540px) {
+        .pricing {
+
+            .individual,
+            .enterprise {
+                width: 280px;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 450px) {
+        .pricing {
+            .text {
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 315px) {
+        .pricing {
+            height: 1210px;
+
+            .individual,
+            .enterprise {
+                width: 270px;
+                height: 440px;
+            }
+
+            .enterprise {
+                height: 465px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 290px) {
+        .pricing {
+            height: 1300px;
+
+            .individual,
+            .enterprise {
+                width: 260px;
+                height: 500px;
+            }
+
+            .enterprise {
+                height: 530px;
+            }
+        }
+    }
+
+}
+
+
+@mixin footerresponsive {
+
+    @media only screen and (max-width: 767px) {
+        .footerlink {
+            flex-direction: column;
+
+            .link {
+                width: 100%;
+
+                li {
+                    text-align: center;
+                }
+            }
+
+            .applink {
+                margin: auto;
+                margin-top: 2rem;
+                width: 320px;
+                text-align: center;
+
+                .applinkcont {
+                    align-items: center;
+                    justify-content: center;
+
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 400px) {
+        .footerlink {
+
+            .applink {
+                width: 99%;
+
+                .applinkcont {
+                    flex-direction: column;
+
+                    .applinkbtn {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .mainfooter {
+
+
+            p {
+                margin-top: .4rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                span {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .link {
+            flex-direction: column;
+
+            ul {
+                width: 100% !important;
+            }
+            ul:nth-child(2) {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

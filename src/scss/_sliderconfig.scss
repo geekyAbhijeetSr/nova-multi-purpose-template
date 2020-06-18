@@ -1,0 +1,85 @@
+@import './variables';
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 370px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 35px 0px rgba(7, 103, 248, 0.15);
+    transition: box-shadow .3s ease-in-out !important;
+
+    &:hover {
+        box-shadow: 0px 0px 20px 0px rgba(7, 103, 248, 0.2);
+    }
+
+    blockquote {
+
+        color: $darker-grey;
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
+
+    .userr {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: 20px;
+
+
+
+        .img {
+            margin-right: .5rem;
+            width: 70px;
+            height: 70px;
+            border-radius: 50% 0 50% 50%;
+
+        }
+
+        .namework {
+
+
+            .name {
+                color: $primary-color;
+            }
+
+            p {
+                font-size: .9rem;
+            }
+        }
+
+
+    }
+
+    @media only screen and (max-width: 450px) {
+        width: 92%;
+        height: auto;
+    }
+
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    background: $primary-color;
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #fff;
+    border: 3px solid $primary-color;
+    width: 12px;
+    height: 12px;
+}

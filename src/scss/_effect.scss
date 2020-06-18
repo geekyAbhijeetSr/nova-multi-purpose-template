@@ -1,0 +1,43 @@
+@import './variables';
+
+@keyframes blink {
+    50% {
+        color: transparent;
+    }
+}
+
+
+.hide {
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all .25s ease-in-out;
+}
+
+.hide.show {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 9999;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -$image-width;
+    }
+}
+
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate3d(0, -$swell-height, 0);
+    }
+
+    50% {
+        transform: translate3d(0, $swell-depth, 0);
+    }
+}
