@@ -211,6 +211,8 @@ nav {
     align-items: stretch;
     height: calc(100vh - 71px);
 
+    
+
     .text {
         width: 46%;
         display: flex;
@@ -264,6 +266,8 @@ nav {
     }
 
     @include landingpageresponsive;
+
+    
 }
 
 

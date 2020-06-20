@@ -1,6 +1,7 @@
 // const checkresize = () => {
 //     const banner = document.querySelector(".banner");
-//     if (window.innerHeight >= window.innerWidth) {
+//     console.log(window.innerHeight, window.innerWidth);
+//     if (window.innerHeight <= 700) {
 //         banner.classList.add("resized");
 //     }
 //     else {
@@ -8,21 +9,22 @@
 //     }
 // }
 
-// checkresize();
-// window.addEventListener("resize", checkresize);
+
 
 
 
 const issMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const dropdown = document.querySelector('.dropdown');
 const dropdowncontent = document.querySelector('.dropdown-content');
-if (isMobile) {
-    console.log("mob");
+if (issMobile) {
     dropdown.classList.remove('hover');
     dropdown.addEventListener('click', () => {
         dropdowncontent.classList.toggle('active');
         console.log(dropdowncontent);
-    })
+    });
+
+    // checkresize();
+    // window.addEventListener("resize", checkresize);
 };
 
 
