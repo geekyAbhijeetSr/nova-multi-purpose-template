@@ -306,10 +306,13 @@
         }
     }
 
-
-    @media only screen and (max-width: 280px) {
+    @media only screen and (max-width: 575px) {
         top: 65px;
         height: calc(100vh - 65px);
+    }
+
+
+    @media only screen and (max-width: 280px) {
         width: 100vw;
         border-radius: 0;
         overflow: scroll;
@@ -558,7 +561,7 @@
     }
 
 
-    
+
 }
 
 @mixin whatwedoreponsive {
@@ -619,6 +622,10 @@
     @media only screen and (max-width: 420px) {
         h1 {
             width: 100%;
+        }
+
+        .jointext {
+            max-width: 235px;
         }
     }
 }
@@ -877,9 +884,62 @@
             ul {
                 width: 100% !important;
             }
+
             ul:nth-child(2) {
                 margin-top: 1rem;
             }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// contact media queries
+@mixin contactlandingresponsive {
+
+
+    @media only screen and (max-width: 1000px) {
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+
+
+    @media only screen and (max-width: 700px) {
+
+        height: 400px;
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+
+        padding: 5px;
+
+        h1 {
+            font-size: 2.5rem;
         }
     }
 }
