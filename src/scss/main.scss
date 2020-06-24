@@ -695,6 +695,7 @@ footer {
 
     p {
         text-align: center;
+        font-size: 1.05rem;
         z-index: 10;
         color: #fff;
         margin-top: 1rem;
@@ -756,6 +757,7 @@ footer {
                     transition: all .25s;
                     pointer-events: none;
                     color: $dark-grey;
+
                     @media screen and (max-width: 300px) {
                         font-size: 16px;
                     }
@@ -770,6 +772,7 @@ footer {
                 border: 0;
                 border-bottom: 1px solid $primary-color;
                 outline: none;
+
                 @media screen and (max-width: 300px) {
                     font-size: 16px;
                 }
@@ -779,6 +782,7 @@ footer {
                     transform: translate3d(-8px, -25px, 0);
                     font-size: 14px;
                     color: $primary-color;
+
                     @media screen and (max-width: 300px) {
                         font-size: 12px;
                     }
@@ -799,9 +803,6 @@ footer {
         .w50 {
             width: 46%;
 
-            // @media screen and (max-width: 991px) {
-            //     width: 46%;
-            // }
 
             @media screen and (max-width: 767px) {
                 width: 100%;
@@ -810,6 +811,145 @@ footer {
 
         .w100 {
             width: 100%;
+        }
+    }
+}
+
+
+
+// about page
+.about {
+    max-width: 760px;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 25px;
+    padding: 25px;
+    text-align: center;
+
+    h1 {
+        color: $primary-color;
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: .5rem;
+        padding: 0 5px 0;
+    }
+}
+
+
+.tools {
+    @include marginTop;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        padding: 20px;
+    }
+
+    .toolsheading {
+        width: 40%;
+        margin-left: 0;
+
+        color: $primary-color;
+    }
+
+    .toolspara {
+        width: 55%;
+        margin-right: 0;
+
+        p {
+            line-height: 1.5;
+            letter-spacing: .1em;
+        }
+
+        p:nth-child(2) {
+            margin-top: 1rem;
+        }
+    }
+
+
+
+    @include toolsresponsive;
+}
+
+
+
+.people {
+    @include marginTop;
+
+    h1 {
+        text-align: center;
+        color: $primary-color;
+    }
+
+
+
+    .cards {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+
+        .card {
+            width: 240px;
+            margin: 15px;
+
+            @media only screen and (max-width: 524px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            padding: 20px;
+            border-radius: 20px;
+
+            box-shadow: 0px 0px 35px 0px rgba(7, 103, 248, 0.12);
+
+            .img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+
+            h2 {
+                color: $primary-color;
+            }
+
+            p {
+                margin-top: .5rem;
+            }
+
+
+            .social {
+                margin-top: 1rem;
+
+                span {
+                    margin-right: 10px;
+
+                    font-size: 1.4rem;
+                }
+
+                .fb {
+                    i {
+                        color: #3b5998;
+                    }
+                }
+
+                .li {
+
+                    i {
+                        color: #007bb6;
+                    }
+                }
+
+                .tw {
+                    i {
+                        color: #00aced;
+                    }
+                }
+            }
         }
     }
 }

@@ -943,3 +943,31 @@
         }
     }
 }
+
+
+
+
+
+
+// about media queris
+@mixin toolsresponsive {
+    @media only screen and (max-width: 991px) {
+
+        flex-direction: column;
+
+        .toolsheading, .toolspara {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+
+        .toolsheading,
+        .toolspara {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+
