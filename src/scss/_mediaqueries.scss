@@ -237,6 +237,7 @@
         top: 68px;
         right: -280px;
         height: calc(100vh - 68px);
+        min-height: 460px;
         width: 280px;
         padding: 70px;
         padding-right: 0;
@@ -955,7 +956,8 @@
 
         flex-direction: column;
 
-        .toolsheading, .toolspara {
+        .toolsheading,
+        .toolspara {
             width: 100%;
         }
     }
@@ -969,5 +971,3 @@
         }
     }
 }
-
-
