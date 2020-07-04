@@ -17,6 +17,7 @@
 }
 
 .overflow {
+    min-height: 460px !important;
     overflow: hidden !important;
 }
 
@@ -47,7 +48,6 @@
 h1,
 h2,
 h3,
-p,
 a,
 button {
     letter-spacing: 0.03em;
